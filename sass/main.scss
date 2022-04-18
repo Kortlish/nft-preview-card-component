@@ -86,8 +86,16 @@
 			cursor: pointer;
 		}
 
-		.primary-text:hover {
+		.title-text {
+			text-decoration: none;
+			color: $white;
+			transition: color 0.2s;
+		}
+
+		.title-text:hover,
+		.title-text:focus {
 			color: $cyan;
+			outline: none;
 		}
 
 		.secondary-text {

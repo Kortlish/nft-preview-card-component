@@ -108,8 +108,17 @@ body {
   cursor: pointer;
 }
 
-.card .info-box .primary-text:hover {
+.card .info-box .title-text {
+  text-decoration: none;
+  color: white;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.card .info-box .title-text:hover,
+.card .info-box .title-text:focus {
   color: #00fff7;
+  outline: none;
 }
 
 .card .info-box .secondary-text {

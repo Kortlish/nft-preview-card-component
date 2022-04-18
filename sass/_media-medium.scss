@@ -1,0 +1,29 @@
+@media (min-width: 768px) {
+	.card {
+		.line {
+			margin: 2em 0;
+		}
+		.info-box {
+			.secondary-text {
+				p {
+					font-size: 1.1em;
+				}
+			}
+		}
+		.lower-box {
+			.creation-dec {
+				font-size: 1.6em;
+			}
+		}
+		.info-box {
+			.bottom-section {
+				.days-left {
+					.days-left-value {
+						font-size: 1.6em;
+						font-weight: 400;
+					}
+				}
+			}
+		}
+	}
+}
