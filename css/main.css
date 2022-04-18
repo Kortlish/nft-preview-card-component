@@ -15,4 +15,209 @@ body {
   font-family: 'Outfit', sans-serif;
   background-color: #0d192b;
 }
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card {
+  width: 88%;
+  background-color: #14253d;
+  color: white;
+  padding: 2.5em;
+  border-radius: 1.5em;
+  max-width: 35em;
+}
+
+.card .card-image {
+  width: 100%;
+  max-height: 300px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+  border-radius: 0.7em;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card .card-image .main-image {
+  border-radius: 0.7em;
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card .card-image::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #00fff7;
+  opacity: 0;
+  -webkit-transition: opacity 0.15s;
+  transition: opacity 0.15s;
+  z-index: 0;
+}
+
+.card .card-image:hover::after {
+  opacity: 0.3;
+}
+
+.card .card-image:hover .view-icon {
+  opacity: 1;
+}
+
+.card .view-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 1;
+}
+
+.card .line {
+  display: block;
+  width: 100%;
+  height: 0.1em;
+  margin: 1.4em 0 1.6em;
+  background-color: #2f415b;
+}
+
+.card .info-box .primary-text {
+  margin: 1.6em 0 1.2em;
+  font-size: 1.4rem;
+  letter-spacing: 0.03em;
+  -webkit-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.card .info-box .primary-text:hover {
+  color: #00fff7;
+}
+
+.card .info-box .secondary-text {
+  font-size: 1.6em;
+  color: rgba(132, 158, 194, 0.884);
+  line-height: 1.6;
+}
+
+.card .info-box .bottom-section {
+  margin: 1em 0 0.8em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card .info-box .bottom-section .eth-value {
+  line-height: 1.5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card .info-box .bottom-section .eth-value img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.card .info-box .bottom-section .eth-value .value {
+  white-space: nowrap;
+  margin-left: 0.4em;
+  font-size: 1.6rem;
+  color: #00fff7;
+}
+
+.card .info-box .bottom-section .days-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.45em;
+  margin-right: 0.2em;
+}
+
+.card .info-box .bottom-section .days-left img {
+  margin-top: 0.2em;
+  width: 1.8em;
+  height: 1.8em;
+  margin-right: 0.2em;
+}
+
+.card .info-box .bottom-section .days-left .days-left-value {
+  font-size: 1.5em;
+  font-weight: 300;
+  color: #8bacda;
+}
+
+.card .lower-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card .lower-box .creator-image img {
+  width: 3.3em;
+  height: 3.3em;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.card .lower-box .creation-dec {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.card .lower-box .creation-dec p {
+  color: #8bacda;
+}
+
+.card .lower-box .creation-dec p .creator {
+  color: white;
+  -webkit-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.card .lower-box .creation-dec p .creator:hover {
+  color: #00fff7;
+}
+
+@media (min-width: 768px) {
+  .card .line {
+    margin: 2em 0;
+  }
+  .card .info-box .secondary-text p {
+    font-size: 1.1em;
+  }
+  .card .lower-box .creation-dec {
+    font-size: 1.6em;
+  }
+  .card .info-box .bottom-section .days-left .days-left-value {
+    font-size: 1.6em;
+    font-weight: 400;
+  }
+}
 /*# sourceMappingURL=main.css.map */
